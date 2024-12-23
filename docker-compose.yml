@@ -1,0 +1,99 @@
+version: '3'
+services:
+  pgsql:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123!
+      POSTGRES_DB: openbas
+    volumes:
+      - pgsqldata:/var/lib/postgresql/data
+    restart: always
+  minio:
+    image: minio/minio:RELEASE.2024-05-28T17-19-04Z
+    volumes:
+      - s3data:/data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123!
+    command: server /data
+    restart: always
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbit
+      - RABBITMQ_DEFAULT_PASS=rabbit123!
+      - RABBITMQ_NODENAME=rabbit01@localhost
+    volumes:
+      - amqpdata:/var/lib/rabbitmq
+    restart: always
+  openbas:
+    image: openbas/platform:1.10.0
+    environment:
+      - SERVER_SSL_KEY-STORE-PASSWORD=KeyStoreP@ss123
+      - OPENBAS_BASE-URL=http://localhost:8080
+      - OPENBAS_AUTH-LOCAL-ENABLE=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://pgsql:5432/openbas
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres123!
+      - MINIO_ENDPOINT=minio
+      - MINIO_ACCESS-KEY=minio
+      - MINIO_ACCESS-SECRET=minio123!
+      - OPENBAS_RABBITMQ_HOSTNAME=rabbitmq
+      - OPENBAS_RABBITMQ_USER=rabbit
+      - OPENBAS_RABBITMQ_PASS=rabbit123!
+      - SPRING_MAIL_HOST=${SPRING_MAIL_HOST}
+      - SPRING_MAIL_PORT=${SPRING_MAIL_PORT}
+      - SPRING_MAIL_USERNAME=${SPRING_MAIL_USERNAME}
+      - SPRING_MAIL_PASSWORD=${SPRING_MAIL_PASSWORD}
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH=${SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH}
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE=${SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_ENABLE}
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_TRUST=*
+      - SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE=${SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE}
+      - OPENBAS_MAIL_IMAP_ENABLED=${OPENBAS_MAIL_IMAP_ENABLED}
+      - OPENBAS_MAIL_IMAP_HOST=${OPENBAS_MAIL_IMAP_HOST}
+      - OPENBAS_MAIL_IMAP_PORT=${OPENBAS_MAIL_IMAP_PORT}
+      - OPENBAS_MAIL_IMAP_USERNAME=${SPRING_MAIL_USERNAME}
+      - OPENBAS_MAIL_IMAP_PASSWORD=${SPRING_MAIL_PASSWORD}
+      - OPENBAS_MAIL_IMAP_AUTH=${OPENBAS_MAIL_IMAP_AUTH}
+      - OPENBAS_MAIL_IMAP_SSL_ENABLE=${OPENBAS_MAIL_IMAP_SSL_ENABLE}
+      - OPENBAS_MAIL_IMAP_SSL_TRUST=*
+      - OPENBAS_MAIL_IMAP_STARTTLS_ENABLE=${OPENBAS_MAIL_IMAP_STARTTLS_ENABLE}
+      - OPENBAS_ADMIN_EMAIL=admin@openbas.io
+      - OPENBAS_ADMIN_PASSWORD=admin123!
+      - OPENBAS_ADMIN_TOKEN=622868ca-f71f-4cd8-afe9-5d6fe981bebe
+    ports:
+      - "8080:8080"
+    depends_on:
+      - pgsql
+      - minio
+      - rabbitmq
+    restart: always
+  collector-mitre-attack:
+    image: openbas/collector-mitre-attack:1.10.0
+    environment:
+      - OPENBAS_URL=http://openbas:8080
+      - OPENBAS_TOKEN=622868ca-f71f-4cd8-afe9-5d6fe981bebe
+      - COLLECTOR_ID=3050d2a3-291d-44eb-8038-b4e7dd107436 # Valid UUIDv4
+      - "COLLECTOR_NAME=MITRE ATT&CK"
+      - COLLECTOR_LOG_LEVEL=info
+    restart: always
+    depends_on:
+      - openbas
+  collector-atomic-red-team:
+    image: openbas/collector-atomic-red-team:1.10.0
+    environment:
+      - OPENBAS_URL=http://openbas:8080
+      - OPENBAS_TOKEN=622868ca-f71f-4cd8-afe9-5d6fe981bebe
+      - COLLECTOR_ID=0f2a85c1-0a3b-4405-a79c-c65398ee4a76 # Valid UUIDv4
+      - "COLLECTOR_NAME=Atomic Red Team"
+      - COLLECTOR_LOG_LEVEL=info
+    restart: always
+    depends_on:
+      - openbas
+volumes:
+  pgsqldata:
+  s3data:
+  amqpdata:
