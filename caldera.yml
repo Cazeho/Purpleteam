@@ -1,0 +1,12 @@
+users:
+  red:
+    red: red                                                                     # Change this
+  blue:
+    blue: blue                                                                    # Change this
+api_key_red: admin123!                                                                # Change this
+api_key_blue: admin123!                                                                # Change this
+api_key: admin123!                                                                     # Change this
+crypt_salt: admin123!                                                                  # Change this
+encryption_key: admin123!                                                              # Change this
+app.contact.http: http://0.0.0.0:8888                    # Change this
+app.contact.tunnel.ssh.user_password: admin123!
