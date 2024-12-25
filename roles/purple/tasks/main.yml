@@ -1,1 +1,19 @@
+---
+- name: Build and Run Docker Container from Dockerfile
+- shell: |
+    docker build -t caldera-kali-venv .
+  args:
+    executable: /bin/bash
 
+- shell: |
+    docker run -it -d --name caldera-kali-container -p 8888:8888 caldera-kali-venv
+  args:
+    executable: /bin/bash
+
+- shell: |
+    docker ps -q --filter "name=caldera-kali-container"
+  register: docker_container_check
+
+- debug:
+    msg: "Docker container is running on port 8888"
+  when: docker_container_check.stdout != ""
