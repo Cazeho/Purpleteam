@@ -7,7 +7,7 @@
 
 - name: Run container Caldera
   shell: |
-      docker run -it -d --name caldera -p 8888:8888 caldera
+      docker compose up -d
   args:
       executable: /bin/bash
 
@@ -20,3 +20,5 @@
   debug:
       msg: "Docker container is running on port 8888"
   when: docker_container_check.stdout != ""
+
+#   docker run -it -d --name caldera -p 8888:8888 caldera
