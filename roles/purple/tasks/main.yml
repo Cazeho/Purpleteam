@@ -1,7 +1,7 @@
 ---
 - name: Build and Run Docker Container from Dockerfile
   shell: |
-      docker build -t caldera .
+      docker build -t caldera-local .
   args:
       executable: /bin/bash
 
@@ -13,7 +13,7 @@
 
 - name: Check docker container
   shell: |
-      docker ps -q --filter "name=caldera"
+      docker ps -q --filter "name=caldera-local"
   register: docker_container_check
 
 - name: check if run in port 8888
