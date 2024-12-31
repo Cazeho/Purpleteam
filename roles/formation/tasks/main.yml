@@ -12,3 +12,17 @@
       docker compose up -d
   args:
       executable: /bin/bash
+
+- name: Wait for the container to initialize
+      pause:
+        seconds: 10
+
+- name: Fetch container logs and filter for credentials
+  shell: |
+        docker logs learnhouse-app-1 | grep -E "email|password" | sed 's/1|learnhouse-api  | //'
+  register: container_logs
+
+
+- name: Display credentials
+    debug:
+      msg: "{{ container_logs.stdout }}"
