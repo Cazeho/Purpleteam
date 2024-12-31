@@ -1,1 +1,13 @@
+---
+- name: Build and Run Docker Container from Dockerfile
+  shell: |
+      git clone https://github.com/learnhouse/learnhouse
+      cd learnhouse
+  args:
+      executable: /bin/bash
 
+- name: Run container Learnhouse
+  shell: |
+      docker compose up -d
+  args:
+      executable: /bin/bash
