@@ -8,6 +8,7 @@
 
 - name: Run container Learnhouse
   shell: |
+      cd learnhouse
       docker compose up -d
   args:
       executable: /bin/bash
