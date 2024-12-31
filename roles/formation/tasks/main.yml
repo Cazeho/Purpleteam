@@ -14,8 +14,8 @@
       executable: /bin/bash
 
 - name: Wait for the container to initialize
-      pause:
-        seconds: 10
+  pause:
+    seconds: 10
 
 - name: Fetch container logs and filter for credentials
   shell: |
@@ -24,5 +24,5 @@
 
 
 - name: Display credentials
-    debug:
-      msg: "{{ container_logs.stdout }}"
+  debug:
+    msg: "{{ container_logs.stdout }}"
