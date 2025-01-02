@@ -1,29 +1,4 @@
 ---
-- name: Build and Run Docker Container from Dockerfile
-  shell: |
-      docker build -t caldera-local .
-  args:
-      executable: /bin/bash
-
-- name: Run container Caldera
-  shell: |
-      docker compose -f stack.yml up -d
-  args:
-      executable: /bin/bash
-
-- name: Check docker container
-  shell: |
-      docker ps -q --filter "name=caldera-local"
-  register: docker_container_check
-
-- name: check if run in port 8888
-  debug:
-      msg: "Docker container is running on port 8888"
-  when: docker_container_check.stdout != ""
-
-
-
----
 - name: Install necessary packages
   apt:
     name:
