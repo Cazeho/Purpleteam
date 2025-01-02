@@ -20,3 +20,52 @@
   debug:
       msg: "Docker container is running on port 8888"
   when: docker_container_check.stdout != ""
+
+
+
+---
+- name: Install necessary packages
+  apt:
+    name:
+      - git
+      - build-essential
+      - apt-utils
+      - cmake
+      - libfontconfig1
+      - libglu1-mesa-dev
+      - libgtest-dev
+      - libspdlog-dev
+      - libboost-all-dev
+      - libncurses5-dev
+      - libgdbm-dev
+      - libssl-dev
+      - libreadline-dev
+      - libffi-dev
+      - libsqlite3-dev
+      - libbz2-dev
+      - mesa-common-dev
+      - qtbase5-dev
+      - qtchooser
+      - qt5-qmake
+      - qtbase5-dev-tools
+      - libqt5websockets5
+      - libqt5websockets5-dev
+      - qtdeclarative5-dev
+      - golang-go
+      - python3-dev
+      - mingw-w64
+      - nasm
+    state: present
+    update_cache: yes
+
+- name: Build and Run Docker Container from Dockerfile
+  shell: |
+      https://github.com/HavocFramework/Havoc.git
+  args:
+      executable: /bin/bash
+
+    - name: Clone Havoc repository
+      git:
+        repo: https://github.com/HavocFramework/Havoc.git
+        dest: /opt/Havoc
+        update: yes
