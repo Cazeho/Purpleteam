@@ -33,14 +33,19 @@
     state: present
     update_cache: yes
 
-- name: Build and Run Docker Container from Dockerfile
+- name: Clone Havoc repository
+  git:
+    repo: https://github.com/HavocFramework/Havoc.git
+    dest: /opt/Havoc
+    update: yes
+
+- name: Set up Havoc C2 server
   shell: |
-      https://github.com/HavocFramework/Havoc.git
+      cd /opt/Havoc/teamserver
+      go mod download golang.org/x/sys
+      go mod download github.com/ugorji/go
+      cd ..
+      make ts-build
+      make client-build
   args:
       executable: /bin/bash
-
-    - name: Clone Havoc repository
-      git:
-        repo: https://github.com/HavocFramework/Havoc.git
-        dest: /opt/Havoc
-        update: yes
