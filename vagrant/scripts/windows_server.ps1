@@ -159,17 +159,17 @@ if (-Not (Test-Path -Path $hmailPath)) {
 # Download powershell 7
 
 if (-Not (Test-Path -Path $powershellPath)) {
-    Write-Host "Downloading Hmail..."
+    Write-Host "Downloading Pw7..."
     try {
         Check-Wget
         & wget -O $powershellPath $powershellUrl
         Write-Host "Hmail downloaded successfully."
     } catch {
-        Write-Error "Failed to download Hmailserver: $_"
+        Write-Error "Failed to download Pw7: $_"
         exit 1
     }
 } else {
-    Write-Host "Hmail already exists at $powershellPath."
+    Write-Host "Pw7 already exists at $powershellPath."
 }
 
 
