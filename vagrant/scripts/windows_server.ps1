@@ -77,7 +77,7 @@ $hmailUrl = "https://www.hmailserver.com/files/hMailServer-5.6.8-B2494.exe"
 $hmailPath = "C:\Program Files\hMailServer-5.6.8-B2494.exe"
 
 $powershellUrl = "https://github.com/PowerShell/PowerShell/releases/download/v7.4.6/PowerShell-7.4.6-win-x64.msi"
-$poowershellPath = "C:\Program Files\PowerShell-7.4.6-win-x64.msi"
+$powershellPath = "C:\Program Files\PowerShell-7.4.6-win-x64.msi"
 
 # Function to check if wget is installed
 function Check-Wget {
@@ -157,6 +157,20 @@ if (-Not (Test-Path -Path $hmailPath)) {
 
 
 # Download powershell 7
+
+if (-Not (Test-Path -Path $powershellPath)) {
+    Write-Host "Downloading Hmail..."
+    try {
+        Check-Wget
+        & wget -O $powershellPath $powershellUrl
+        Write-Host "Hmail downloaded successfully."
+    } catch {
+        Write-Error "Failed to download Hmailserver: $_"
+        exit 1
+    }
+} else {
+    Write-Host "Hmail already exists at $powershellPath."
+}
 
 
 # install OPENBAS agent (need powershell 7 => pwsh.exe)
