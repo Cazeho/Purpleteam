@@ -174,7 +174,15 @@ if (-Not (Test-Path -Path $powershellPath)) {
 
 
 # install OPENBAS agent (need powershell 7 => pwsh.exe)
-$agent = iex (iwr "http://192.168.10.50:8080/api/agent/installer/openbas/windows/622868ca-f71f-4cd8-afe9-5d6fe981bebe").Content
+# Check for PowerShell 7 executable
+$pwshPath = "C:\Program Files\PowerShell\7\pwsh.exe"
+
+if (Test-Path $pwshPath) {
+    # Run the command using PowerShell 7
+    & $pwshPath -Command 'iex (iwr "http://192.168.10.50:8080/api/agent/installer/openbas/windows/622868ca-f71f-4cd8-afe9-5d6fe981bebe").Content'
+} else {
+    Write-Host "PowerShell 7 is not installed or the path is incorrect."
+}
 
 
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
