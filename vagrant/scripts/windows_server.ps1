@@ -60,6 +60,8 @@ try {
 
 # IIS
 
+Install-WindowsFeature -Name "Web-Server" -IncludeAllSubFeature -IncludeManagementTools -Restart:$true
+
 # .NET framework
 
 DISM /online /enable-feature /featurename:NetFx3 /all
