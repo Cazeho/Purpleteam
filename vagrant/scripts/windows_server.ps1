@@ -61,6 +61,8 @@ try {
 
 # .NET framework
 
+DISM /online /enable-feature /featurename:NetFx3 /all
+
 
 # Define variables
 $SysmonUrl = "https://download.sysinternals.com/files/Sysmon.zip"
