@@ -1,9 +1,9 @@
 #https://github.com/safebuffer/vulnerable-AD
 
 # Variables
-$ComputerName = "lab"
-$DomainNetbiosName = "LAB"
-$DomainFQDN = "lab.local"
+$ComputerName = "medicare"
+$DomainNetbiosName = "MEDICARE"
+$DomainFQDN = "medicare.local"
 $LogPath = "C:\Logs\Install-ADDS.log"
 $SafeModePassword = (ConvertTo-SecureString "admin123;" -AsPlainText -Force) # Set a secure password for DSRM (Directory Services Restore Mode)
 $LocalAdminPassword = "admin123;"
