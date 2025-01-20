@@ -1,0 +1,53 @@
+DistinguishedName : CN=http_svc,CN=Managed Service Accounts,DC=medicare,DC=local
+    windows2019: Enabled           : True
+    windows2019: Name              : http_svc
+    windows2019: ObjectClass       : msDS-ManagedServiceAccount
+    windows2019: ObjectGUID        : 48b51863-258a-4a06-89ea-f901b6f46892
+    windows2019: SamAccountName    : http_svc$
+    windows2019: SID               : S-1-5-21-2859267010-1452648394-1233756582-1212
+    windows2019: UserPrincipalName :
+    windows2019:
+    windows2019:        [*] Creating mssql_svc services account
+    windows2019:
+    windows2019: DistinguishedName : CN=mssql_svc,CN=Managed Service Accounts,DC=medicare,DC=local
+    windows2019: Enabled           : True
+    windows2019: Name              : mssql_svc
+    windows2019: ObjectClass       : msDS-ManagedServiceAccount
+    windows2019: ObjectGUID        : 91918647-1011-4be2-aea9-ca007431c23c
+    windows2019: SamAccountName    : mssql_svc$
+    windows2019: SID               : S-1-5-21-2859267010-1452648394-1233756582-1213
+    windows2019: UserPrincipalName :
+    windows2019:
+    windows2019:        [*] Creating exchange_svc services account
+    windows2019:
+    windows2019: DistinguishedName : CN=exchange_svc,CN=Managed Service Accounts,DC=medicare,DC=local
+    windows2019: Enabled           : True
+    windows2019: Name              : exchange_svc
+    windows2019: ObjectClass       : msDS-ManagedServiceAccount
+    windows2019: ObjectGUID        : 1c018b89-39e2-42ec-9fa5-0478298c6f87
+    windows2019: SamAccountName    : exchange_svc$
+    windows2019: SID               : S-1-5-21-2859267010-1452648394-1233756582-1214
+    windows2019: UserPrincipalName :
+    windows2019:
+    windows2019:        [+] Kerberoasting Done
+    windows2019:        [*] AS-REPRoasting petronella.dolli
+    windows2019:        [*] AS-REPRoasting judith.abbie
+    windows2019:        [+] AS-REPRoasting Done
+    windows2019:        [*] DnsAdmins : melisent.simonette
+    windows2019:        [*] DnsAdmins Nested Group : Senior management
+    windows2019:        [+] DnsAdmins Done
+    windows2019:        [*] Password in Description : loise.eilis
+    windows2019:        [*] Password in Description : gerri.lorianne
+    windows2019:        [+] Password In Object Description Done
+    windows2019:        [*] Default Password : erinn.portia
+    windows2019:        [+] Default Password Done
+    windows2019:        [*] Same Password (Password Spraying) : marcellina.inger
+    windows2019:        [*] Same Password (Password Spraying) : ediva.demetris
+    windows2019:        [*] Same Password (Password Spraying) : carlye.keven
+    windows2019:        [*] Same Password (Password Spraying) : alejandrina.dionis
+    windows2019:        [*] Same Password (Password Spraying) : janis.colene
+    windows2019:        [+] Password Spraying Done
+    windows2019:        [*] Giving DCSync to : stephana.jesse
+    windows2019:        [*] Giving DCSync to : adelaida.karole
+    windows2019:        [+] DCSync Done
+    windows2019:        [+] SMB Signing Disabled
