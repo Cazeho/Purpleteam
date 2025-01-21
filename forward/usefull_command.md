@@ -17,3 +17,12 @@ dsa.msc
 enable reception in port 9997
 create index win
 readapt macro with use of index win
+
+
+
+index
+
+win
+proxy
+mail
+web
