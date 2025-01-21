@@ -31,7 +31,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs
 
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/Sysmon.xml" -OutFile "Sysmon.xml" -UseBasicParsing
 
-sysmon64.exe -accepteula -i "C:\Program Files\sysmon\Sysmon.xml"
+.\Sysmon64.exe -accepteula -i "C:\Program Files\sysmon\Sysmon.xml"
 
 & "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" restart
 
