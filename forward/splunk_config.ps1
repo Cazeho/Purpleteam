@@ -5,9 +5,13 @@ IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com
 & "C:\Program Files\splunkforwarder-9.4.0-6b4ebe426ca6-windows-x64.msi" WINEVENTLOG_SEC_ENABLE=0 WINEVENTLOG_SYS_ENABLE=0 WINEVENTLOG_APP_ENABLE=0 PRIVILEGESECURITY=1 USE_LOCAL_SYSTEM=1 SPLUNKPASSWORD=Password123! AGREETOLICENSE=YES /quiet
 
 
-
-& "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" add forward-server 192.168.10.100:9997
 & "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" edit user admin -password Password123! -auth admin:Password123!
+& "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" add forward-server 192.168.10.100:9997
+
+
+
+
+
 & "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" set default-hostname windows2019 -auth admin:Password123!
 
 sysmon64.exe -accepteula -i "C:\Program Files\sysmon\Sysmon.xml"
