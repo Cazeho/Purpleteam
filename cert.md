@@ -1,3 +1,5 @@
+apt-get update && sudo apt-get install -y squid-common squid squidclient libecap3 libecap3-dev
+
 mkdir -p /etc/squid/ssl_cert
 
 chmod 700 ssl_cert/
