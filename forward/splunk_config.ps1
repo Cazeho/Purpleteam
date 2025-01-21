@@ -26,13 +26,13 @@ New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\sysmon_inputs
 New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\win_inputs_app\local" -ItemType Directory -Force
 
 
-IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/outputs.conf"));
-IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/powershell_inputs.conf"));
-IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/sysmon_inputs.conf"));
-IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/win_event_log_inputs.conf"));
+wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/outputs.conf"
+wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/powershell_inputs.conf"
+wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/sysmon_inputs.conf"
+wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/win_event_log_inputs.conf"
 
 
-IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/Sysmon.xml"));
+wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/Sysmon.xml"
 
 
 
