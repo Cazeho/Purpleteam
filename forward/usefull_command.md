@@ -1,0 +1,3 @@
+http://localhost:8000/fr-FR/app/splunk_monitoring_console/forwarder_instance?form.time.earliest=-4h%40m&form.time.latest=now&form.funcVolume=avg&form.hostname=windows2019
+
+http://localhost:8000/fr-FR/app/splunk_monitoring_console/monitoringconsole_overview
