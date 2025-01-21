@@ -8,3 +8,6 @@ C:\Program Files\SplunkUniversalForwarder\etc\system\local
 
 
 rename to inputs.conf
+
+
+dsa.msc
