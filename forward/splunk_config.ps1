@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/sysm
 https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/win_event_log_inputs.conf
 
 
-
+https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/Sysmon.xml
 
 
 
