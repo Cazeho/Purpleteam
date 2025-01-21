@@ -11,6 +11,7 @@ openssl x509 -in myCA.pem -outform DER -out myCA.der
 
 
 ```
+# Squid normally listens to port 3128
 http_port 3128 ssl-bump cert=/etc/squid/ssl_cert/myCA.pem generate-host-certificates=on dynamic_cert_mem_cache_size=4MB
 
 acl step1 at_step SslBump1
