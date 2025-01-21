@@ -18,11 +18,14 @@ enable reception in port 9997
 create index win
 readapt macro with use of index win
 
-
+| tstats count where index=* by host,sourcetype _time
+| rex field=host "(?<host>[^.]+)" 
+| eval host=upper(host) 
+| stats dc(host) as number_of_hosts dc(sourcetype) as number_of_sourcetype
 
 ## index
 
-- win
-- proxy
-- mail
+- win => sysmon (ok)
+- proxy => squid
+- mail => hmail
 - web
