@@ -22,7 +22,7 @@ readapt macro with use of index win
 
 index
 
-win
-proxy
-mail
-web
+- win
+- proxy
+- mail
+- web
