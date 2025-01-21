@@ -14,9 +14,7 @@ IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com
 
 & "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" set default-hostname windows2019 -auth admin:Password123!
 
-sysmon64.exe -accepteula -i "C:\Program Files\sysmon\Sysmon.xml"
 
-& "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" restart
 
 
 
@@ -26,13 +24,17 @@ New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\sysmon_inputs
 New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\win_inputs_app\local" -ItemType Directory -Force
 
 
-wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/outputs.conf"
-wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/powershell_inputs.conf"
-wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/sysmon_inputs.conf"
-wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/win_event_log_inputs.conf"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/outputs.conf" -OutFile "outputs.conf" -UseBasicParsing
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/powershell_inputs.conf" -OutFile "powershell_inputs.conf" -UseBasicParsing
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/sysmon_inputs.conf" -OutFile "sysmon_inputs.conf" -UseBasicParsing
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/win_event_log_inputs.conf" -OutFile "win_event_log_inputs.conf" -UseBasicParsing
 
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/Sysmon.xml" -OutFile "Sysmon.xml" -UseBasicParsing
 
-wget "https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/Sysmon.xml"
+sysmon64.exe -accepteula -i "C:\Program Files\sysmon\Sysmon.xml"
+
+& "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" restart
+
 
 
 
