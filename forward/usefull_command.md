@@ -11,3 +11,9 @@ rename to inputs.conf
 
 
 dsa.msc
+
+
+
+enable reception in port 9997
+create index win
+readapt macro with use of index win
