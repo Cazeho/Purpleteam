@@ -13,3 +13,8 @@ New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\win_inputs_ap
 sysmon64.exe -accepteula -i "C:\Program Files\sysmon\Sysmon.xml"
 
 "C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe" restart
+
+
+
+
+"C:\Program Files\splunkforwarder-9.4.0-6b4ebe426ca6-windows-x64.msi" 'WINEVENTLOG_SEC_ENABLE=0 WINEVENTLOG_SYS_ENABLE=0 WINEVENTLOG_APP_ENABLE=0 PRIVILEGESECURITY=1 USE_LOCAL_SYSTEM=1 SPLUNKPASSWORD=Password123! AGREETOLICENSE=YES /quiet'
