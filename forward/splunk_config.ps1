@@ -19,6 +19,11 @@ New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\sysmon_inputs
 New-Item -Path "C:\Program Files\SplunkUniversalForwarder\etc\apps\win_inputs_app\local" -ItemType Directory -Force
 
 
+https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/outputs.conf
+https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/powershell_inputs.conf
+https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/sysmon_inputs.conf
+https://raw.githubusercontent.com/Cazeho/Purpleteam/refs/heads/main/forward/win_event_log_inputs.conf
+
 
 
 
