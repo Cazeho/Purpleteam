@@ -1,1 +1,4 @@
+```
 apt install -y suricata
+
+```
