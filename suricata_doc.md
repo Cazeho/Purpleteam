@@ -17,3 +17,7 @@ tail -f /var/log/suricata/eve.json
 
 
 default-rule-path
+
+
+
+https://github.com/seanlinmt/suricata/blob/master/files/rules/emerging-malware.rules
