@@ -50,10 +50,6 @@ acl Safe_ports port 777         # multiling http
 
 
 http_port 3128 ssl-bump generate-host-certificates=on dynamic_cert_mem_cache_size=40MB cert=/etc/squid/ssl_cert/myCA.pem
-#sslcrtd_program /usr/lib/squid/security_file_certgen -s /var/lib/ssl_db -M 40MB
-#ssl_bump peek all
-#ssl_bump splice all
-
 
 ssl_bump server-first all
 always_direct allow all
