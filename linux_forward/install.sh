@@ -5,4 +5,14 @@ cd /opt/splunkforwarder
 ./bin/splunk start --accept-license --no-prompt --answer-yes --seed-passwd Password123!
 ./bin/splunk enable boot-start
 ./bin/splunk add forward-server 192.168.10.100:9997
-./bin/splunk add monitor /var/log/squid/access.log -sourcetype squid:access
+#./bin/splunk add monitor /var/log/squid/access.log -sourcetype squid:access
+
+
+nano /opt/splunkforwarder/etc/system/local/inputs.conf
+
+[monitor:///var/log/squid/access.log]
+index = proxy
+sourcetype = squid:access
+
+
+./bin/splunk restart
