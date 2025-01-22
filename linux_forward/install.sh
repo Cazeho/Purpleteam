@@ -3,3 +3,4 @@ wget -O splunkforwarder-9.4.0-6b4ebe426ca6-linux-amd64.tgz "https://download.spl
 tar -xvf splunkforwarder-9.4.0-6b4ebe426ca6-linux-amd64.tgz
 cd /opt/splunkforwarder
 ./bin/splunk start --accept-license --no-prompt --answer-yes --seed-passwd Password123!
+./bin/splunk enable boot-start
