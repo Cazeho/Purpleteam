@@ -26,6 +26,6 @@ readapt macro with use of index win
 ## index
 
 - win => sysmon (ok)
-- proxy => squid
+- proxy => squid (ok)
 - mail => hmail
 - web => IIS
