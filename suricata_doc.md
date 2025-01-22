@@ -7,5 +7,5 @@ apt install -y suricata
 
 
 /var/log/suricata/fast.log
-/etc/suricata/rules/local.rules
+/etc/suricata/rules/
 /etc/suricata/suricata.yaml
