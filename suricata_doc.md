@@ -9,3 +9,7 @@ apt install -y suricata
 /var/log/suricata/fast.log
 /etc/suricata/rules/
 /etc/suricata/suricata.yaml
+
+
+
+default-rule-path
