@@ -1,6 +1,8 @@
 
+```
 
-# https://github.com/diladele/squid-ubuntu
+### https://github.com/diladele/squid-ubuntu
+
 
 # add diladele apt key
 wget -qO - https://packages.diladele.com/diladele_pub.asc | sudo apt-key add -
@@ -23,6 +25,7 @@ openssl x509 -in myCA.pem -outform DER -out myCA.der
 /usr/lib/squid/security_file_certgen -c -s /var/lib/ssl_db -M 4MB
 
 
+```
 
 squid.conf
 ```
