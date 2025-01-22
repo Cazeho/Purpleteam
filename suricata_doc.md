@@ -5,6 +5,10 @@ apt install -y suricata
 
 ```
 
+tail -f /var/log/suricata/eve.json
+
+
+
 
 /var/log/suricata/fast.log
 /etc/suricata/rules/
