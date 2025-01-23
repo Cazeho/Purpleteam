@@ -8,7 +8,7 @@ dpkg -i kibana-8.17.1-amd64.deb
 
 
 nano /etc/elasticsearch/elasticsearch.yml
-
+nano /etc/kibana/kibana.yml
 
 
 systemctl daemon-reload
