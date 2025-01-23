@@ -1,0 +1,1 @@
+^"(?<protocol>.*)"\s+(?<thread_id>\d+)\s+(?<session_id>\d+)\s+"(?<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d+)"\s+"(?<ip_address>\d{1,3}(?:\.\d{1,3}){3})"\s+"(?<action>[A-Z]+):\s+(?<message>.+)"$
