@@ -87,6 +87,10 @@ server.host: 0.0.0.0
 #elasticsearch.ssl.certificate: /path/to/your/client.crt
 #elasticsearch.ssl.key: /path/to/your/client.key
 
+xpack.encryptedSavedObjects.encryptionKey: 5f933e0bb00f6256429c3407da5277f6
+xpack.reporting.encryptionKey: 6c3418545636cf6967f1ff7dd3ed41e9
+xpack.security.encryptionKey: c3dff9b89a4a08bffbcbe288b6b996ec
+
 # Enables you to specify a path to the PEM file for the certificate
 # authority for your Elasticsearch instance.
 #elasticsearch.ssl.certificateAuthorities: [ "/path/to/your/CA.pem" ]
