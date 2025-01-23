@@ -5,3 +5,6 @@ wget https://artifacts.elastic.co/downloads/kibana/kibana-8.17.1-amd64.deb
 
 dpkg -i elasticsearch-8.17.1-amd64.deb
 dpkg -i kibana-8.17.1-amd64.deb
+
+
+nano /etc/elasticsearch/elasticsearch.yml
