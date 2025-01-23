@@ -23,3 +23,6 @@ systemctl start kibana
 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token --scope kibana >> token.txt
 /usr/share/kibana/bin/kibana-verification-code >> code.txt
 /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+
+
+/usr/share/kibana/bin/kibana-encryption-keys generate
