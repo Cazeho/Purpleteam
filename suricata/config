@@ -1,1 +1,4 @@
+apt install suricata -y
 
+
+tail -f /var/log/suricata/fast.log
