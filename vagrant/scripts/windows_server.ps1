@@ -190,6 +190,8 @@ if (Test-Path $pwshPath) {
 }
 
 
+# https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/128.6.0esr/win64/fr/Thunderbird%20Setup%20128.6.0esr.exe
+
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/wazehell/vulnerable-AD/master/vulnad.ps1"));
 Invoke-VulnAD -UsersLimit 100 -DomainName $DomainFQDN
