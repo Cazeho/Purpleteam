@@ -14,3 +14,6 @@ nano /etc/elasticsearch/elasticsearch.yml
 systemctl daemon-reload
 systemctl enable elasticsearch
 systemctl enable kibana
+
+systemctl start elasticsearch
+systemctl start kibana
