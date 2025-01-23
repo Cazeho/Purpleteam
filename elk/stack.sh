@@ -26,3 +26,5 @@ systemctl start kibana
 
 
 /usr/share/kibana/bin/kibana-encryption-keys generate
+
+# https://www.elastic.co/guide/en/security/8.17/rules-ui-create.html
