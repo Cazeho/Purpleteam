@@ -1,4 +1,7 @@
 apt install suricata -y
 
+suricata-update
+systemctl restart suricata
+
 
 tail -f /var/log/suricata/fast.log
