@@ -27,6 +27,6 @@ readapt macro with use of index win
 
 - win => sysmon (ok)
 - proxy => squid (ok)
-- suricata => suricata 
+- suricata => suricata  (ok)
 - mail => hmail
 - web => IIS
