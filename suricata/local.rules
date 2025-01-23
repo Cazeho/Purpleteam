@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"Suspicious TCP Traffic with SNI - www.youtube.com"; content:"www.youtube.com"; nocase; flow:to_server,established; classtype:trojan-activity; sid:100005; rev:1;)
