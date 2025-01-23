@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+WINDOWS_SERVER="StefanScherer/windows_2019"
+KALI="kalilinux/rolling"
+UBUNTU="ubuntu/jammy64"
+
+Vagrant.configure("2") do |config|
+
+
+  config.vm.define "elk" do |lab|
+    lab.vm.box = UBUNTU
+    lab.vm.hostname = "elk"
+    lab.vm.network "private_network", ip: "192.168.10.100"
+    lab.vm.network "forwarded_port", guest: 9200, host: 9200
+    lab.vm.network "forwarded_port", guest: 5601, host: 5601
+    lab.vm.disk :disk, size:"20GB", primary: true
+    lab.vm.provider "virtualbox" do |vb|
+      vb.memory = 8000
+      vb.cpus = 2
+      vb.name = "elk"
+      vb.gui = false
+    end
+  end
+  	
+  
+ end
