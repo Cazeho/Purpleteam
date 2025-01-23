@@ -17,3 +17,7 @@ systemctl enable kibana
 
 systemctl start elasticsearch
 systemctl start kibana
+
+
+
+/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token --scope kibana >> token.txt
