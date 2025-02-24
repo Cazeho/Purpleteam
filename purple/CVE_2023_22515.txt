@@ -82,6 +82,7 @@ apt install ligolo-ng -y
 
 wget https://github.com/nicocha30/ligolo-ng/releases/download/v0.7.5/ligolo-ng_proxy_0.7.5_windows_amd64.zip
 unzip ligolo-ng_proxy_0.7.5_windows_amd64.zip
+upload /opt/proxy.exe C:\Program Files\Atlassian\Confluence
 
 ## if ligolo is install (need to be internal with ligolo-ng)
 
