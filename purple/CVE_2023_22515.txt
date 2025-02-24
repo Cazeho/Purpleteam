@@ -60,7 +60,8 @@ whoami /priv
 
 Install-Module -Name SqlServer -AllowClobber -Force
 Get-SqlInstance -ServerInstance "medicare.local"
-
+$serverInstance = "medicare.local"
+Get-SqlLogin -ServerInstance $serverInstance
 
 
 
