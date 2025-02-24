@@ -7,6 +7,10 @@ multi/http/atlassian_confluence_rce_cve_2023_22515
 
 https://tryhackme.com/room/confluence202322515
 
+login.action?os_destination=%2Findex.action&permissionViolation=true
+
+https://product-downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-8.5.0-x64.exe
+
 https://download.microsoft.com/download/9/b/e/9bee9f00-2ee2-429a-9462-c9bc1ce14c28/SSMS-Setup-ENU.exe (ssms)
 https://download.microsoft.com/download/5/1/4/5145fe04-4d30-4b85-b0d1-39533663a2f1/SQL2022-SSEI-Expr.exe (sql server)
 
