@@ -3,4 +3,6 @@ https://www.youtube.com/watch?v=5cUOgCdfCdI
 
 multi/http/atlassian_confluence_rce_cve_2023_22515
 
-https://download.microsoft.com/download/5/1/4/5145fe04-4d30-4b85-b0d1-39533663a2f1/SQL2022-SSEI-Expr.exe
+
+https://download.microsoft.com/download/9/b/e/9bee9f00-2ee2-429a-9462-c9bc1ce14c28/SSMS-Setup-ENU.exe (ssms)
+https://download.microsoft.com/download/5/1/4/5145fe04-4d30-4b85-b0d1-39533663a2f1/SQL2022-SSEI-Expr.exe (sql server)
