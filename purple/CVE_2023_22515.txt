@@ -17,7 +17,7 @@ on SQL Server 2022 Configuration Manager (enable TCP/IP)
 
 
 database_name: confluence
-hostname: 192.168.10.20
+hostname: localhost
 port:1433
 user:sa/Administrator
 password:admin123;
