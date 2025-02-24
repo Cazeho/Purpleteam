@@ -2,6 +2,8 @@
 https://www.youtube.com/watch?v=5cUOgCdfCdI
 
 
+## use metasploit for exploit CVE
+
 multi/http/atlassian_confluence_rce_cve_2023_22515
 
 
@@ -61,6 +63,19 @@ Install-Module -Name SqlServer
 nxc mssql medicare.local -u sa -p 'admin123;' --local-auth
 
 impacket-mssqlclient MEDICARE.LOCAL/sa:"admin123;"@medicare.local
+
+
+
+## Install Ligolo-ng
+
+
+
+## if ligolo is install
+
+make scan with nmap & metasploit
+
+
+## Rules
 
 https://research.splunk.com/web/630ea8b2-2800-4f5d-9cbc-d65c567349b0/ ==> 
 
