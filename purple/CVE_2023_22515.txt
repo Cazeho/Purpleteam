@@ -7,6 +7,8 @@ https://www.youtube.com/watch?v=5cUOgCdfCdI
 multi/http/atlassian_confluence_rce_cve_2023_22515
 
 
+upload /opt/proxy.exe C:\\Windows\\Temp\\tool.exe
+
 https://tryhackme.com/room/confluence202322515
 
 login.action?os_destination=%2Findex.action&permissionViolation=true
