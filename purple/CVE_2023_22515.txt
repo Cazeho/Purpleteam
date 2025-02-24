@@ -56,9 +56,11 @@ password:admin123;
 whoami /priv
 
 
-Install-Module -Name SqlServer
+## MSSQL scan
 
-## MSSQL
+Install-Module -Name SqlServer -AllowClobber -Force
+
+## MSSQL execution
 
 nxc mssql medicare.local -u sa -p 'admin123;' --local-auth
 
