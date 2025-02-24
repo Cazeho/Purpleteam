@@ -59,6 +59,10 @@ whoami /priv
 ## MSSQL scan
 
 Install-Module -Name SqlServer -AllowClobber -Force
+Get-SqlInstance -ServerInstance "medicare.local"
+
+
+
 
 ## MSSQL execution
 
