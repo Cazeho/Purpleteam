@@ -70,7 +70,7 @@ Get-SqlLogin -ServerInstance $serverInstance
 nxc mssql medicare.local -u sa -p 'admin123;' --local-auth
 
 impacket-mssqlclient MEDICARE.LOCAL/sa:"admin123;"@medicare.local
-
+impacket-mssqlclient -windows-auth MEDICARE.LOCAL/Administrator:"admin123;"@medicare.local
 
 
 ## Install Ligolo-ng
