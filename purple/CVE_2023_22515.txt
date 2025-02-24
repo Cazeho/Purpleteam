@@ -12,6 +12,10 @@ https://stackoverflow.com/questions/20923015/login-to-microsoft-sql-server-error
 
 => configure confluence database
 
+on SQL Server 2022 Configuration Manager (enable TCP/IP)
+
+
+
 database_name: confluence
 port:1433
 user:sa/Administrator
