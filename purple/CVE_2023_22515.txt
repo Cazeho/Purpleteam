@@ -73,6 +73,9 @@ impacket-mssqlclient MEDICARE.LOCAL/sa:"admin123;"@medicare.local
 impacket-mssqlclient -windows-auth MEDICARE.LOCAL/Administrator:"admin123;"@medicare.local
 
 
+enum_db
+enum_logins
+
 ## Install Ligolo-ng
 
 
