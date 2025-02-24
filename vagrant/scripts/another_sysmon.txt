@@ -1,0 +1,1 @@
+https://github.com/MHaggis/notes/blob/master/Splunk/inputs.conf
