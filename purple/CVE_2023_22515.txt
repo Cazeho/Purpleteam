@@ -54,6 +54,8 @@ password:admin123;
 whoami /priv
 
 
+Install-Module -Name SqlServer
+
 ## MSSQL
 
 nxc mssql medicare.local -u sa -p 'admin123;' --local-auth
