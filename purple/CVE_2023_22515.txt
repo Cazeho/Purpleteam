@@ -78,7 +78,7 @@ enum_logins
 
 ## Install Ligolo-ng
 
-
+apt install ligolo-ng -y
 
 ## if ligolo is install (need to be internal with ligolo-ng)
 
