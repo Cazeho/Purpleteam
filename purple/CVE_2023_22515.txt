@@ -10,6 +10,9 @@ https://download.microsoft.com/download/5/1/4/5145fe04-4d30-4b85-b0d1-39533663a2
 
 
 
+
+https://research.splunk.com/web/630ea8b2-2800-4f5d-9cbc-d65c567349b0/ ==> 
+
 | tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Web where Web.url IN ("*/server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=false*","*/server-info.action?bootstrapStatusProvider.applicationConfig.setupComplete=0&*") Web.http_method=GET Web.status=200 by Web.http_user_agent, Web.status Web.http_method, Web.url, Web.url_length, Web.src, Web.dest, sourcetype 
 | `drop_dm_object_name("Web")` 
 | `security_content_ctime(firstTime)` 
