@@ -1,6 +1,6 @@
 
 https://www.youtube.com/watch?v=5cUOgCdfCdI
-https://www.youtube.com/watch?v=-UY0fHckkGc
+
 
 multi/http/atlassian_confluence_rce_cve_2023_22515
 
@@ -16,10 +16,12 @@ on SQL Server 2022 Configuration Manager (enable TCP/IP)
   nd set port 1433 et si besoin create a firewall rule in allow in inbound and outbound
 
 
+enable sa auth => https://www.youtube.com/watch?v=-UY0fHckkGc
+
 database_name: confluence
 hostname: localhost
 port:1433
-user:sa/Administrator
+user:sa
 password:admin123;
 
 
