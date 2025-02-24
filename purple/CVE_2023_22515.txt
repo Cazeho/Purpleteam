@@ -77,9 +77,11 @@ impacket-mssqlclient MEDICARE.LOCAL/sa:"admin123;"@medicare.local
 
 
 
-## if ligolo is install
+## if ligolo is install (need to be internal with ligolo-ng)
 
 make scan with nmap & metasploit
+
+nmap -p 1433 --script ms-sql-info medicare.local
 
 
 ## Rules
