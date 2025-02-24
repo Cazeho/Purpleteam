@@ -17,6 +17,7 @@ on SQL Server 2022 Configuration Manager (enable TCP/IP)
 
 
 enable sa auth => https://www.youtube.com/watch?v=-UY0fHckkGc
+create confluence database
 
 database_name: confluence
 hostname: localhost
