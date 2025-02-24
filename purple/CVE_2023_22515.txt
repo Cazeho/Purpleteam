@@ -51,6 +51,8 @@ username:admin
 password:admin123;
 
 
+whoami /priv
+
 
 ## MSSQL
 
