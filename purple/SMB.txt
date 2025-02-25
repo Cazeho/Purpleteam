@@ -1,0 +1,10 @@
+### SMB attack 
+
+nxc smb medicare.local
+
+
+
+python3 -m venv venv
+source venv/bin/activate
+pip install smbclientng
+smbclientng -u Administrator -p "admin123;" -d medicare.local --host medicare.local
