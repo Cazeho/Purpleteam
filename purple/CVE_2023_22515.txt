@@ -138,6 +138,10 @@ Click Edit, then Add.
 in location select WINDOWS2019
 type: nt service\mssql$sqlexpress
 
+
+### exfiltrate data
+
+
 ## Rules
 
 https://research.splunk.com/web/630ea8b2-2800-4f5d-9cbc-d65c567349b0/ ==> 
