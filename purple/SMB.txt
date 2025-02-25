@@ -28,3 +28,4 @@ john hash --show
 ## scan share with asrep account
 
 nxc smb medicare.local -u "allegra.dosi" -p "123123" --shares
+smbclientng -u  allegra.dosi -p "123123" -d medicare.local --host medicare.local
