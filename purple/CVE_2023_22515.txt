@@ -139,6 +139,11 @@ in location select WINDOWS2019
 type: nt service\mssql$sqlexpress
 
 
+### SMB attack 
+
+nxc smb medicare.local
+
+
 ### exfiltrate data
 
 
