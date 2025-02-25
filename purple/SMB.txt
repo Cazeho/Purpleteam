@@ -8,3 +8,10 @@ python3 -m venv venv
 source venv/bin/activate
 pip install smbclientng
 smbclientng -u Administrator -p "admin123;" -d medicare.local --host medicare.local
+
+
+## true attack
+
+use rubeus for asreproast
+crack hash of asreproast with john
+nxc smb medicare.local -u "allegra.dosi" -p "123123" --shares
