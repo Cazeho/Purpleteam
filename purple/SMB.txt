@@ -33,7 +33,7 @@ john hash --show
 
 nxc smb medicare.local -u "allegra.dosi" -p "123123" --shares
 smbclientng -u  allegra.dosi -p "123123" -d medicare.local --host medicare.local
-
+use data
 
 ## ntlm relay
 
