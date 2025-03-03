@@ -1,0 +1,7 @@
+
+## attack machine
+
+### check network passing A --> B (proxy) --> C (medicare.local)
+
+curl -x http://192.168.10.200:3128 http://192.168.10.20:8089
+curl -x http://192.168.10.200:3128 http://medicare.local:8089
