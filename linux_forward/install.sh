@@ -16,3 +16,5 @@ sourcetype = squid:access
 
 
 ./bin/splunk restart
+
+/opt/splunkforwarder/bin/splunk status
