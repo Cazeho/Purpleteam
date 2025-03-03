@@ -16,3 +16,10 @@ curl -x http://192.168.10.200:3128 http://medicare.local
 /etc/hosts
 
 192.168.10.20  medicare.local
+
+
+## configure IIS server
+
+install
+
+https://download.microsoft.com/download/E/9/8/E9849D6A-020E-47E4-9FD0-A023E99B54EB/requestRouter_amd64.msi
