@@ -26,3 +26,28 @@ https://download.microsoft.com/download/E/9/8/E9849D6A-020E-47E4-9FD0-A023E99B54
 https://download.microsoft.com/download/1/2/8/128E2E22-C1B9-44A4-BE2A-5859ED1D4592/rewrite_amd64_en-US.msi
 
 in searchbar tap: iis
+
+
+Open IIS Manager.
+Click on the server name (top-level node).
+Open Application Request Routing (ARR).
+If not available, install ARR from the Microsoft IIS website.
+In the right panel, click Server Proxy Settings.
+Check Enable Proxy and click Apply.
+Create a Rewrite Rule
+Click on your website in IIS.
+Open URL Rewrite.
+Click Add Rules (on the right panel).
+
+## add site
+
+in this PC => inetup => wwwroot => create a folder medicare.local
+medicare.local
+
+## Edit Inbound Rule
+
+name: confluence
+
+Pattern: (.*)
+
+Rewrite URL: http://localhost:8090/{R:1}
