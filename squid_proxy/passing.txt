@@ -7,3 +7,10 @@ curl -x http://192.168.10.200:3128 http://192.168.10.20:8089
 curl -x http://192.168.10.200:3128 http://medicare.local:8089
 curl -x http://192.168.10.200:3128 http://192.168.10.20
 curl -x http://192.168.10.200:3128 http://medicare.local
+
+
+## on proxy server 
+
+/etc/hosts
+
+192.168.10.20  medicare.local
