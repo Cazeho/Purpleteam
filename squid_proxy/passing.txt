@@ -1,6 +1,8 @@
 
 ## attack machine
 
+export http_proxy="http://192.168.10.200:3128"
+
 ### check network passing A --> B (proxy) --> C (medicare.local)
 
 curl -x http://192.168.10.200:3128 http://192.168.10.20:8089
